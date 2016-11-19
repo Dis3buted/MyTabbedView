@@ -1,2 +1,2 @@
 # MyTabbedView
-Just plain implementation of tabbed windows
+Just plain implementation of tabbed windows cocoa swift
