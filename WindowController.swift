@@ -10,7 +10,7 @@ import Cocoa
 
 class WindowController: NSWindowController {
 
-    var subViews: [WindowController] = []
+    var subview: WindowController?
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -24,8 +24,8 @@ class WindowController: NSWindowController {
         let windowVC: WindowController = story?.instantiateInitialController() as! WindowController
         
         self.window?.addTabbedWindow(windowVC.window!, ordered: .above)
-        self.subViews.append(windowVC)
-    
+        self.subview = windowVC
+        
         windowVC.window?.orderFront(self.window)
         windowVC.window?.makeKey()
     }
