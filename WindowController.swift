@@ -26,8 +26,9 @@ class WindowController: NSWindowController {
         self.window?.addTabbedWindow(windowVC.window!, ordered: .above)
         self.subview = windowVC
         
-        windowVC.window?.orderFront(self.window)
-        windowVC.window?.makeKey()
+        windowVC.window?.makeKeyAndOrderFront(self.window)
+       // windowVC.window?.orderFront(self.window)
+       // windowVC.window?.makeKey()
     }
 
 }
